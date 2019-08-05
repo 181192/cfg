@@ -36,7 +36,10 @@ function searchConfig {
   fi
 }
 
-git clone --bare git@github.com:181192/cfg.git $HOME/.cfg
+if [ ! -d "$HOME/.cfg" ]; then
+  echo -e "\e[36mRepository does not exists, cloning now...\e[0m"
+  git clone --bare git@github.com:181192/cfg.git $HOME/.cfg
+fi
 
 mkdir -p .cfg-backup
 
