@@ -1,4 +1,7 @@
 # This is Git's per-user configuration file.
+[user]
+	email = Kristoffer-Andre.Kalliainen@stacc.com
+	name = Kristoffer-Andre Kalliainen
 [alias]
 	fr = !git fetch && git rebase
 	frp = !git fetch && git rebase && git push
