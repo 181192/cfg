@@ -45,8 +45,6 @@ fi
 
 mkdir -p .cfg-backup
 
-cfg checkout
-
 if ! cfg checkout -q; then
   echo -e "\e[93mBacking up pre-existing dot files\e[0m"
   cfg checkout 2>&1 | grep -E "\s+\." | awk '{print $1}' | xargs -I{} mv {} .cfg-backup/{}
