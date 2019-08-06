@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[alias]
+	fr = !git fetch && git rebase
+	frp = !git fetch && git rebase && git push
+	adog = log --all --decorate --oneline --graph
+[format]
+	pretty = full
