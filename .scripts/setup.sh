@@ -18,7 +18,7 @@ END
 )
 
 function cfg {
-  /usr/bin/git --git-dir="$HOME"/.cfg/ --work-tree="$HOME"
+  /usr/bin/git --git-dir="$HOME"/.cfg/ --work-tree="$HOME" "$@"
 }
 
 function searchConfig {
@@ -29,7 +29,7 @@ function searchConfig {
   local bashrc_file
   bashrc_file="$(<"$2")"
 
-  if [[ "$bashrc_file" =~ "$config" ]]; then
+  if [[ "$bashrc_file" = *"$config"* ]]; then
     echo -e "\e[93mConfig already exists for $name\e[0m"
   else
     echo "" >> "$bashrc"
@@ -44,6 +44,8 @@ if [ ! -d "$HOME/.cfg" ]; then
 fi
 
 mkdir -p .cfg-backup
+
+cfg checkout
 
 if ! cfg checkout -q; then
   echo -e "\e[93mBacking up pre-existing dot files\e[0m"
