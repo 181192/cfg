@@ -32,3 +32,7 @@ complete -F _complete_alias i
 
 # Stern
 source <(stern --completion=bash)
+
+
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
