@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 BASHRC_FILE="$HOME"/.bashrc
 
 # 'END' to prevent the variable from expanding
