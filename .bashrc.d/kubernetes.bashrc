@@ -1,5 +1,5 @@
 # Flux
-alias f='fluxctl --k8s-fwd-ns=flux'
+alias f='fluxctl --k8s-fwd-ns=flux-system'
 complete -F _complete_alias f
 
 
