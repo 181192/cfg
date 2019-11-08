@@ -36,3 +36,6 @@ source <(stern --completion=bash)
 
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Kubesh
+export PATH="~/.kubesh/bin:$PATH"
