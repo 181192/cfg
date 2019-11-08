@@ -61,10 +61,6 @@ if [ "$color_prompt" = yes ]; then
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-<<<<<<< HEAD
-
-=======
->>>>>>> 07bb7c1f14c189173e29c7b5ea33a2c465e35396
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -120,14 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-<<<<<<< HEAD
-# export http_proxy=''
-# export https_proxy=''
-# export ftp_proxy=''
-# export socks_proxy=''
-
-=======
->>>>>>> 07bb7c1f14c189173e29c7b5ea33a2c465e35396
 for file in $HOME/.bashrc.d/*.bashrc; do
   [ -f "$file" ] && source "$file"
 done
@@ -135,9 +123,5 @@ done
 for bcfile in $HOME/.bash_completion.d/*.bash_completion; do
   [ -f "$bcfile" ] && source "$bcfile"
 done
-<<<<<<< HEAD
-=======
 
 export PATH=$PATH:~/.local/bin
-
->>>>>>> 07bb7c1f14c189173e29c7b5ea33a2c465e35396
