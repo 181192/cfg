@@ -1,3 +1,5 @@
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=~/golib
+
+export GOROOT=$HOME/.go
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
