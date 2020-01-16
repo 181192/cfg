@@ -8,3 +8,6 @@
 	adog = log --all --decorate --oneline --graph
 [format]
 	pretty = full
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
