@@ -125,3 +125,5 @@ for bcfile in $HOME/.bash_completion.d/*.bash_completion; do
 done
 
 export PATH=$PATH:~/.local/bin
+
+export GOPATH="$HOME/go"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
