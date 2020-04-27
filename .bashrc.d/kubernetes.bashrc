@@ -7,14 +7,9 @@ complete -F _complete_alias f
 source <(helm completion bash)
 
 
-# Helm 3
-alias helm3='XDG_CACHE_HOME=$HOME/.cache/helm3 XDG_CONFIG_HOME=$HOME/.config/helm3 XDG_DATA_HOME=$HOME/.local/share/helm3 helm3'
-complete -F _complete_alias helm3
-source <(helm3 completion bash)
-
-# Kompose
-source <(kompose completion bash)
-
+# Helm 2
+complete -F _complete_alias helm2
+source <(helm2 completion bash)
 
 # Kubectl
 source <(kubectl completion bash)
@@ -44,3 +39,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Kubesh
 export PATH="~/.kubesh/bin:$PATH"
+
+# Kubens/kubectx
+export PATH="~/.kubectx:$PATH"
