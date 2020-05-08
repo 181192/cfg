@@ -42,3 +42,6 @@ export PATH="~/.kubesh/bin:$PATH"
 
 # Kubens/kubectx
 export PATH="~/.kubectx:$PATH"
+
+# Linkerd
+source <(linkerd completion bash)
