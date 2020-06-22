@@ -9,3 +9,7 @@ source ~/.scripts/git-prompt.sh
 
 # PROMPT_COMMAND
 PROMPT_COMMAND='__posh_git_ps1 "\u@\h: \$(kube_ps1) \n\w " "\$ ";'$PROMPT_COMMAND
+
+function open () {
+  xdg-open "$@">/dev/null 2>&1
+}
