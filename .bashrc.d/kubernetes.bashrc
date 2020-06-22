@@ -1,4 +1,5 @@
 # Flux
+source <(fluxctl completion bash)
 alias f='fluxctl --k8s-fwd-ns=flux-system'
 complete -F _complete_alias f
 
@@ -40,8 +41,10 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Kubesh
 export PATH="~/.kubesh/bin:$PATH"
 
-# Kubens/kubectx
-export PATH="~/.kubectx:$PATH"
-
 # Linkerd
+export PATH="~/.linkerd2/bin:$PATH"
 source <(linkerd completion bash)
+
+# Kubebuilder
+export PATH=/usr/local/kubebuilder/bin:$PATH
+
