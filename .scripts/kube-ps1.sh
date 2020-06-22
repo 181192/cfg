@@ -184,7 +184,7 @@ _kube_ps1_file_newer_than() {
   local check_time=$2
 
   if [[ "${KUBE_PS1_SHELL}" == "zsh" ]]; then
-    mtime=$(zstat -L +mtime "${file}")
+    mtime=$(zstat +mtime "${file}")
   elif stat -c "%s" /dev/null &> /dev/null; then
     # GNU stat
     mtime=$(stat -L -c %Y "${file}")
@@ -256,7 +256,7 @@ _kube_ps1_get_ns() {
 _kube_ps1_get_context_ns() {
   # Set the command time
   if [[ "${KUBE_PS1_SHELL}" == "bash" ]]; then
-    if ((BASH_VERSINFO[0] >= 4)); then
+    if ((BASH_VERSINFO[0] >= 4 && BASH_VERSINFO[1] >= 2)); then
       KUBE_PS1_LAST_TIME=$(printf '%(%s)T')
     else
       KUBE_PS1_LAST_TIME=$(date +%s)
