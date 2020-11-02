@@ -48,3 +48,5 @@ source <(linkerd completion bash)
 # Kubebuilder
 export PATH=/usr/local/kubebuilder/bin:$PATH
 
+# k3d
+source <(k3d completion bash)
