@@ -42,3 +42,7 @@ export PATH=/usr/local/kubebuilder/bin:$PATH
 
 # k3d
 source <(k3d completion bash)
+
+
+# Kustomize
+source <(kustomize completion bash)
